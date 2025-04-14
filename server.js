@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import connectDB from "./database/connectDB.js";
+import todoRouter from "./routes/todoRouter.js";
 
 const app = express();
 const port = process.env.PORTNUMMER || 5000;
@@ -14,6 +15,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello von Server!");
 });
+//CRUD Routen
+app.use("/todos", todoRouter)
 
 // Server starten
 
