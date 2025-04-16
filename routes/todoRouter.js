@@ -25,7 +25,7 @@ todoRouter.get("/", getAllTodosController);
 //UPDATE
 
 
-//DELETE
+//DELETEee
 todoRouter.delete("/:test", deleteTodoController)
 //test = 67fcd74615bd54bb5a6b6752
 // 5. Exportiere den Router
